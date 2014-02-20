@@ -1,0 +1,47 @@
+Practical and Test Marking System
+
+Software
+•	Version Control
+•	Batching
+•	Aldap
+•	Website – Django(python)
+•	Github
+	o	Store repositories and documents
+•	LaTeX
+•	MySql
+•	Database
+	o	Marks/pracs (csv)
+
+System
+•	Multiuser accessibility
+•	Web accessibility
+•	Secure (passwords)
+•	Audit trails
+•	Mark sheet	
+	o	Should lock after session
+•	When searching for students search through everything (student number, name, surname)
+
+	Lecturer
+•	Reporting System(pdf)
+	o	Account of students for class
+	o	Distribution graphs – bar, pie, . . . 
+•	Can add or correct not registered students/marks
+
+Tutor/TA
+•	Gets assigned to prac session
+•	Gets a list of students for that session
+•	Should have marking criteria before session
+•	Can give marks
+•	Can alter marks
+	o	With reason
+	o	Notify lecturer	
+
+Student
+•	Interface: booking system
+	o	Indicates TA for session
+	o	Allows students to book
+•	Should only be able to see their marks 
+	o	Marks should be weighted and totalled
+	o	Cannot access anybody else’s mark
+	o	Cannot edit marks
+	
