@@ -1,0 +1,66 @@
+Non-Functional Requirements
+
+1.	Performance Requirements
+Student
+•	A student of the marking system will log in into the Android mobile application or mobile web using their student number and Linux password; this reduces added effort on a student to register for accessing their practical marks. 
+•	Students can concurrently book for practical session using the application or the mobile web site.
+•	A logged in student will be able to view their marks by simply selecting their module of choice and then specific practical marks; the database gets queried in the background while a student logs in and therefor it has all their marks already cached and ready for display. A student will be able to view all their marks instantly after selecting to view a mark.  
+•	The marking system is able to handle multiple students at a time. Markers, students and lecturers can use the system concurrently.
+•	The application runs on an Android version of at least Android 4.1, which is the fastest version of Android at its release date. (Android)
+•	As soon as a marker has committed their marks to the database that particular student’s marks will be updated immediately as well as all aggregates will be readjusted accordingly. When a student views their marks they will be able to view their marks and aggregates immediately; all calculations are done in the background.
+
+Marker
+•	Markers can search for a student either by student number, name or surname and the application will auto-fill the search result for faster access.  The application or mobile web site will only search users that are registered for the current practical session to reduce the amount of students being searched to be marked.
+•	An automated time scheduler or a lecturer will unlock the mark sheet for the duration particular practical session and unlock it when the session has expired.
+•	Markers are assigned a practical session prior to the actual session and have a virtual list of all students who booked for that particular practical session and can start marking immediately after the mark sheet has been unlocked either by the lecturer or the automated time scheduler. 
+•	Markers have a mark criteria before their marking session that’ll preserve accuracy of mark allocations to a student. 
+•	When a marker adds or updates a mark to the mark sheet it will synchronize immediately with the University of Pretoria’s Computer Science department’s database (if an internet connection is available) and a student will be able to view their newly updated marks a few seconds after the marker has added the marks to the mark sheet and synchronized it with the database. 
+
+Lecturer
+•	Lectures have an advanced search tool that allows them to search for registered markers or students as well practical sessions.
+•	When a lecturer locks or unlocks a mark sheet for editing it will reflect immediately on all markers (depending on internet speed).
+•	All edits or updates of marks for a student by a lecturer will be synchronized immediately with the University of Pretoria’s Computer Science database and will update all other participants viewing that student’s marks.
+•	A lecturer can immediately download and view statistics (incl. graphs and aggregates) of a practical session or all practical sessions in PDF format, as the statistics are recalculated in the background after every addition or update of a mark.
+•	All practical session time adjustments by the lecturer for a practical session will immediately reflect to all markers and students; however internet availability could negatively impact the time it takes for the practical session time adjustments to reflect to other students.
+
+2.	Safety and Security Requirements
+Student
+•	A student will have to log in with their University of Pretoria’s Computer Science credentials (which is provided to them at the Computer Science Help Desk) in order to view their marks.
+•	A student will be allowed to only view their marks and aggregates of their marks.
+•	Only students that booked for a practical session will be able to get marked as the markers will not be able to search any other student except for the ones booked for the current practical session that they have been allocated to mark.
+•	All students’ marks will be aggregated in the background without the input the student to ensure accurate aggregates.
+Marker
+•	A marker has to log in to the Android application or mobile website with their University of Pretoria’s Computer Science Department credentials. 
+•	A marker will have to agree to a terms and conditions after logging in that in detail will bind the marker with a contract to mark fairly and unbiased. 
+•	A marker will be allowed to only search for students that have been booked for their practical session, view the marks of any student that have booked for their practical session, view the marks rubric for their practical session, add marks for a student that has booked for their practical session and edit marks for a user only if the lecturer has given the marker permission to do so and must supply a reason for editing the marks.
+•	If a marker has not actively used his Android application or the mobile website for longer than 10 minutes (lecturers may change the timeout period) then the Android application or the mobile website will log the marker off.
+•	All actions performed by a marker will be recorded onto the audit trail. The audit trail will provide the following information; the marker’s details who performed the action, which action was performed, why the action was performed (only in cases of editing of marks), as well as a date/time stamp.
+•	Markers will only be able to add/update/edit marks for the duration of their practical session (Lecturer has the ability to extend the time if necessary). Before and after the practical session the mark sheet will be locked and no editing of marks can occur.
+•	A rubric is available for a marker during the practical session that is used to accurately asses the work of a student.
+•	All editing of marks by a marker will evoke a confirmation pop-up box to ensure that the correct decision was made.
+
+Lecturer
+•	A lecturer logs in to the Android application or mobile website by using their University of Pretoria’s Computer Science credentials.
+•	A lecturer has full access to search for any marker or student.
+•	A lecturer has to access level required to alter all time session periods, practical session times, edit/update a student’s marks, and assign markers to specific practical sessions.
+•	A lecturer, marker or a student cannot edit, update or alter the audit trail in any way.
+•	Any editing of marks by the lecturer will be recorded into the audit trail.
+•	All editing of marks by a lecturer will evoke a confirmation pop-up box to ensure that the correct decision was made.
+•	Only a lecturer can view an audit trail.
+•	The system administrator is the only person with access to the actual audit trail.
+
+3.	Software Quality Attributes
+Reliability
+•	The application relies heavily on a stable internet connection and if there is an internet connection than the system is able to handle the total amount of users in a practical session with almost immediate feedback and output.
+•	The system guarantees an accurate aggregate of marks as predefined formulas are used to aggregate marks.
+•	All graphs are an accurate representation because the guarantee of predefined formulas.
+Robustness 
+•	Querying a database to return only a portion of the database reduces the risk of accessing other student’s marks.
+Flexibility and Portability
+•	The system has both an Android application interface as well as a mobile web interface to accommodate users of the system without access to Android smartphones of at least Android 4.1.
+Interoperability
+•	The system will interface with the University of Pretoria’s Computer Science Department’s website and will ease use by having a similar structural interface as the Computer Science’s department’s website.
+
+Usability
+•	A friendly user interface similar to University of Pretoria’s Computer Science Department’s website makes it easy for a user to use the Android application or mobile website.
+ 
